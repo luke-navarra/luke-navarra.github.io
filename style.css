@@ -1,6 +1,157 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: sans-serif;
+    background-color: #0d0f0d;
+    color: #c8f0c8;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.7;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 24px 80px;
+}
+
+::selection {
+    background: #39ff14;
+    color: #0d0f0d;
+}
+
+a {
+    color: #39ff14;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(57, 255, 20, 0.4);
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+a:hover {
+    color: #9fffb0;
+    border-color: #9fffb0;
+}
+
+/* ---------- Headings ---------- */
+h1 {
+    font-size: 32px;
+    color: #39ff14;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #1f2a1f;
+    padding-bottom: 16px;
+    margin-bottom: 8px;
+}
+
+h1::before {
+    content: "$ ";
+    color: #2a7a2a;
+}
+
+body > p {
+    color: #8fae8f;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #39ff14;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+h2::before {
+    content: "> ";
+    color: #2a7a2a;
+}
+
+/* ---------- Sections ---------- */
+section {
+    margin-bottom: 56px;
+    padding-top: 24px;
+    border-top: 1px solid #1f2a1f;
+}
+
+section p {
+    color: #a8cba8;
+    margin-bottom: 14px;
+    max-width: 620px;
+}
+
+/* ---------- Projects list ---------- */
+#projects ul {
+    list-style: none;
+}
+
+#projects li {
+    margin-bottom: 4px;
+}
+
+#projects li a {
+    display: block;
+    padding: 12px 16px;
+    background: #121712;
+    border: 1px solid #1f2a1f;
+    border-bottom: none;
+}
+
+#projects li:last-child a {
+    border-bottom: 1px solid #1f2a1f;
+}
+
+#projects li a:hover {
+    background: #16201a;
+    border-color: #2a7a2a;
+}
+
+#projects li a span::before {
+    content: "[ ] ";
+    color: #2a7a2a;
+}
+
+#projects li a:hover span::before {
+    content: "[x] ";
+    color: #39ff14;
+}
+
+/* ---------- Experience list ---------- */
+#experience ul {
+    list-style: none;
+}
+
+#experience li {
+    margin-bottom: 22px;
+    padding-left: 18px;
+    border-left: 2px solid #1f2a1f;
+}
+
+#experience li strong {
+    color: #39ff14;
+    font-weight: normal;
+}
+
+#experience li p {
+    color: #8fae8f;
+    font-size: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+/* ---------- Contact ---------- */
+#contact a {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    body {
+        padding: 28px 16px 60px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
 }
