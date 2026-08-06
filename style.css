@@ -6,13 +6,27 @@
 }
 
 body {
+    display: flex;
     background-color: #fafafa;
     color: #2b2b2b;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.7;
     max-width: 1100px;
     margin: 0 auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body.project-page {
+    display: block;
+    height: auto;
+    overflow: visible;
+    max-width: 760px;
     padding: 56px 24px 80px;
+}
+
+body.project-page section {
+    margin-bottom: 40px;
 }
 
 ::selection {
@@ -31,20 +45,53 @@ a:hover {
     border-color: #2e7d4f;
 }
 
-/* ---------- Headings ---------- */
-h1 {
-    font-size: 34px;
+/* ---------- Sidebar ---------- */
+#sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    padding: 56px 24px;
+    background: #fafafa;
+    border-right: 1px solid #e4e4e4;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+}
+
+#sidebar h1 {
+    font-size: 28px;
     font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 6px;
+    margin-bottom: 24px;
 }
 
-body > p {
-    color: #6b6b6b;
-    font-size: 16px;
-    margin-bottom: 48px;
+#sidebar ul {
+    list-style: none;
 }
 
+#sidebar li {
+    margin-bottom: 14px;
+}
+
+#sidebar a {
+    font-weight: 500;
+    color: #2b2b2b;
+    border-bottom: none;
+}
+
+#sidebar a:hover {
+    color: #2e7d4f;
+}
+
+/* ---------- Content ---------- */
+#content {
+    flex: 1;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 56px 40px 80px;
+    scroll-behavior: smooth;
+}
+
+/* ---------- Headings ---------- */
 h2 {
     font-size: 13px;
     font-weight: 600;
@@ -60,6 +107,7 @@ h2 {
 /* ---------- Sections ---------- */
 section {
     margin-bottom: 52px;
+    scroll-margin-top: 40px;
 }
 
 section p {
@@ -72,6 +120,7 @@ section p {
 #projects ul {
     list-style: none;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 10px;
 }
 
@@ -136,12 +185,25 @@ section p {
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     body {
-        padding: 36px 16px 60px;
+        display: block;
+        height: auto;
+        overflow: visible;
     }
 
-    h1 {
-        font-size: 28px;
+    #sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        border-right: none;
+        border-bottom: 1px solid #e4e4e4;
+        padding: 24px;
+    }
+
+    #content {
+        height: auto;
+        overflow-y: visible;
+        padding: 24px;
     }
 }
