@@ -192,16 +192,52 @@ strong, b {
     border-radius: 40px;
 }
 
+/* Logo with Electric Bolt Background Accent */
 .nav-brand .brand-link {
-    font-family: var(--font-mono);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #ffffff;
-    letter-spacing: -0.05em;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
-.dot-accent {
-    color: var(--accent-green);
+.logo-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.bolt-bg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: rgba(74, 222, 128, 0.35);
+    filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.7));
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: rotate(-10deg);
+}
+
+.logo-text {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-mono);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease;
+}
+
+.brand-link:hover .bolt-bg {
+    color: rgba(74, 222, 128, 0.7);
+    transform: scale(1.2) rotate(0deg);
+    filter: drop-shadow(0 0 14px rgba(74, 222, 128, 0.95));
+}
+
+.brand-link:hover .logo-text {
+    color: #ffffff;
 }
 
 .nav-links {
@@ -563,7 +599,6 @@ strong, b {
     color: var(--text-secondary);
     font-size: 0.98rem;
     margin-bottom: 20px;
-
 }
 
 .project-tech-stack {
