@@ -1,83 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Minecraft for Cybersecurity Education | Luke Navarra</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="project-page">
-        <h1>Code Quest</h1>
-        <p><a href="index.html">&larr; Back to all projects</a></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Code Quest: Minecraft Cybersecurity Education | Luke Navarra</title>
+    
+    <meta name="description" content="Cardiff University First Class Dissertation Project by Luke Navarra: Using Minecraft as an interactive platform for cybersecurity education.">
+    <meta property="og:title" content="Code Quest: Minecraft for Cybersecurity Education">
+    <meta property="og:description" content="Interactive game-based learning platform for cybersecurity fundamentals built in Minecraft.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .project-detail-container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 100px 24px;
+        }
 
-        <section id="overview">
-            <h2>Overview</h2>
-            <p>
-                This project uses Minecraft as a platform to teach students core cybersecurity
-                concepts through interactive, game-based learning. Rather than presenting security
-                topics as abstract theory, the project places students inside a world where they
-                explore, experiment with, and apply cybersecurity principles directly.
-            </p>
-            <p>
-                The aim is to make technical security topics more accessible and engaging,
-                particularly for learners who benefit from hands-on, exploratory approaches
-                rather than traditional lecture-based teaching.
-            </p>
-        </section>
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--accent-green);
+            margin-bottom: 32px;
+        }
 
-        <section id="video">
-            <h2>Project Walkthrough</h2>
-            <a href="https://www.youtube.com/playlist?list=PLHh9d7M0UVY0" target="_blank" rel="noopener">
-                <img src="https://img.youtube.com/vi/HzF1-EyuZF8/hqdefault.jpg"
-                     alt="Minecraft Cybersecurity Education Project thumbnail"
-                     style="width: 100%; max-width: 560px;">
+        .project-hero-card {
+            padding: 40px;
+            border-radius: 28px;
+            margin-bottom: 40px;
+        }
+
+        .image-preview-card {
+            position: relative;
+            display: block;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            margin: 24px 0;
+            background: #000;
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .image-preview-card:hover .project-image {
+            transform: scale(1.03);
+        }
+
+        .play-overlay-card {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            transition: background 0.3s ease;
+        }
+
+        .image-preview-card:hover .play-overlay-card {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .play-icon-circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: var(--accent-green);
+            color: #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 0 30px rgba(74, 222, 128, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        .image-preview-card:hover .play-icon-circle {
+            transform: scale(1.15);
+        }
+
+        .watch-label {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: #ffffff;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 6px 16px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-section {
+            margin-bottom: 40px;
+        }
+
+        .detail-section h2 {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .detail-section p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .feature-list {
+            list-style: none;
+            display: grid;
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .feature-icon {
+            color: var(--accent-green);
+            font-family: var(--font-mono);
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="project-detail-container">
+        <a href="index.html" class="back-link">
+            ← Back to All Projects
+        </a>
+
+        <article class="project-hero-card liquid-glass">
+            <div class="project-badge-row">
+                <span class="badge-featured">Dissertation Project</span>
+                <span class="badge-tag">First Class Honours</span>
+            </div>
+
+            <h1 class="editorial-title" style="font-size: 3.5rem;">Code Quest</h1>
+            <h2 class="sub-headline">Minecraft as a Platform for Cybersecurity Education</h2>
+
+            <div class="project-tech-stack" style="margin-top: 20px;">
+                <span class="code-pill">Java</span>
+                <span class="code-pill">Minecraft API</span>
+                <span class="code-pill">Gamified Security</span>
+                <span class="code-pill">Pedagogical Design</span>
+                <span class="code-pill">Cardiff University Dissertation</span>
+            </div>
+        </article>
+
+        <!-- Video Walkthrough Image Banner -->
+        <section class="detail-section liquid-glass" style="padding: 36px; border-radius: 24px;">
+            <h2>Project Walkthrough Video</h2>
+            <p>
+                Click below to watch the project video playlist on YouTube:
+            </p>
+
+            <a href="https://www.youtube.com/playlist?list=PLHh9d7M0UVY0" target="_blank" rel="noopener" class="image-preview-card">
+                <img src="https://img.youtube.com/vi/HzF1-EyuZF8/hqdefault.jpg" alt="Minecraft Cybersecurity Education Project Thumbnail" class="project-image">
+                <div class="play-overlay-card">
+                    <div class="play-icon-circle">▶</div>
+                    <span class="watch-label">Watch Walkthrough on YouTube ↗</span>
+                </div>
             </a>
-            <p>
-                <a href="https://www.youtube.com/playlist?list=PLHh9d7M0UVY0" target="_blank" rel="noopener">
-                    View the full playlist on YouTube &rarr;
+
+            <p style="text-align: center; margin-top: 16px;">
+                <a href="https://www.youtube.com/playlist?list=PLHh9d7M0UVY0" target="_blank" rel="noopener" class="btn btn-secondary btn-sm liquid-glass">
+                    View Full Playlist on YouTube ↗
                 </a>
             </p>
         </section>
 
-        <section id="details">
-            <h2>Technical Details</h2>
-            <ul>
-                <li>Built using Minecraft as the delivery platform for interactive lessons</li>
-                <li>Designed to teach cybersecurity fundamentals through gameplay</li>
-                <li>Focused on making technical security concepts approachable for students</li>
+        <!-- Project Overview -->
+        <section class="detail-section liquid-glass" style="padding: 36px; border-radius: 24px;">
+            <h2>Overview & Objectives</h2>
+            <p>
+                Cybersecurity concepts are frequently taught through abstract theoretical lectures, which can present a high barrier to entry for learners. <strong>Code Quest</strong> leverages Minecraft's immersive sandbox environment to make technical security concepts engaging, practical, and intuitive.
+            </p>
+            <p>
+                Instead of simply reading about cryptographic principles, access controls, or network traversal, students encounter these topics as interactive puzzles and quests within a custom-designed game world.
+            </p>
+
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-icon">[✓]</span>
+                    <div><strong>Gamified Learning:</strong> Replaces dry slides with hands-on exploratory challenges inside a familiar 3D world.</div>
+                </li>
+                <li>
+                    <span class="feature-icon">[✓]</span>
+                    <div><strong>Experiential Problem-Solving:</strong> Teaches threat identification, authentication mechanisms, and privilege concepts.</div>
+                </li>
+                <li>
+                    <span class="feature-icon">[✓]</span>
+                    <div><strong>Evaluated Pedagogical Outcome:</strong> Designed and tested as part of my First Class Honours dissertation at Cardiff University.</div>
+                </li>
             </ul>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
+        <!-- Contact CTA -->
+        <section class="detail-section liquid-glass" style="padding: 36px; border-radius: 24px; text-align: center;">
+            <h2>Interested in the Technical Details?</h2>
             <p>
-                Feel free to reach out to me via email, or connect with me on GitHub or LinkedIn.
+                I'd be glad to share more about the dissertation methodology, architecture, and findings.
             </p>
-            <p>
-                I am open to any graduate schemes or opportunities!
-            </p>
-            <div class="contact-links">
-                <a href="mailto:lukenavarra8@gmail.com" class="contact-link">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                        <path d="M2 4h20v16H2V4zm2 2v.5l8 6 8-6V6H4zm16 2.5l-8 6-8-6V18h16V8.5z"/>
-                    </svg>
-                    Email
-                </a>
-                <a href="https://github.com/luke-navarra/luke_navarra.github.io" class="contact-link" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                    </svg>
-                    GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/luke-navarra/" class="contact-link" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-                        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.025-3.04-1.85-3.04-1.855 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.475-.9 1.635-1.85 3.365-1.85 3.6 0 4.27 2.37 4.27 5.455v6.28zM5.34 7.43a2.07 2.07 0 11.001-4.14 2.07 2.07 0 010 4.14zM7.11 20.45H3.56V9h3.55v11.45z"/>
-                    </svg>
-                    LinkedIn
-                </a>
+            <div style="margin-top: 24px;">
+                <a href="index.html#contact" class="btn btn-primary">Get In Touch</a>
             </div>
         </section>
+    </main>
 
-        <script src="script.js"></script>
-    </body>
+    <footer id="footer">
+        <p>© 2026 Luke Navarra. Designed & Built for GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>

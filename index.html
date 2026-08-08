@@ -1,110 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Luke Navarra - Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav id="sidebar">
-            <h1>Luke Navarra</h1>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Luke Navarra | Software & Cybersecurity Engineer</title>
+    
+    <!-- Meta SEO & Social Tags -->
+    <meta name="description" content="Portfolio of Luke Navarra - First Class Computer Science Graduate specializing in Cybersecurity, Forensics, and Software Development from Cardiff University.">
+    <meta property="og:title" content="Luke Navarra | Software & Cybersecurity Engineer">
+    <meta property="og:description" content="Cardiff University First Class Honours CS Graduate specializing in Security & Forensics. View projects, skills, and experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://luke-navarra.github.io/">
+    <meta property="og:image" content="images/Profile Picture.jpg">
+
+    <!-- Fonts: Inter (Sans), Cormorant Garamond (Editorial Display), Fira Code (Mono Tech) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Liquid Glass Navigation Capsule -->
+    <header id="navbar-container">
+        <nav id="floating-nav" class="liquid-glass">
+            <div class="nav-brand">
+                <a href="#hero" class="brand-link">LN<span class="dot-accent">.</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
+    </header>
 
-        <main id="content">
-            <section id="about">
-                <h2>About Me</h2>
-                <img src="images/Profile Picture.jpg" alt="Profile Picture" class="profile-picture">
-                <p>
-                    I'm a Computer Science graduate from Cardiff University, with a degree focused on
-                    Security and Forensics. I was awarded a First Class Honours degree and have a particular
-                    interest in how systems are secured and how they can be exploited.
-                </p>
-                <p>
-                    Outside of my coursework, I have been keeping my skills sharp by working on personal projects and
-                    developing my cybersecurity skills through platforms such as Hack The Box!
-                </p>
-            </section>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <!-- Status Badge -->
+                <div class="status-badge liquid-glass">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">Available for Graduate Schemes & Security Roles</span>
+                </div>
 
-            <section id="projects">
-                <h2>My Projects</h2>
-                <ul>
-                    <li>
-                        <a href="minecraft-project.html">
-                            <span class="project-title">Code Quest</span>
-                            <span class="project-description">My dissertation project focused on using Minecraft for cybersecurity education.</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="project2.html">
-                            <span class="project-title">Project 2</span>
-                            <span class="project-description">Description of Project 2</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="project3.html">
-                            <span class="project-title">Project 3</span>
-                            <span class="project-description">Description of Project 3</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <h1 class="editorial-title">Luke Navarra</h1>
+                        <h2 class="sub-headline">Software & Cybersecurity Engineer</h2>
+                        <p class="hero-lead">
+                            First Class Honours Computer Science graduate from <span class="highlight">Cardiff University</span>, specializing in <span class="highlight">Cybersecurity & Security Forensics</span>. Passionate about securing complex systems, ethical hacking, and software engineering.
+                        </p>
 
-            <section id="experience">
-                <h2>Experience</h2>
-                <ul>
-                    <li>
-                        <strong>Varsity Student Athlete — Korfball</strong>, Cardiff University (2026)
-                        <p>Competed at Welsh Varsity (Cardiff vs Swansea) in front of 100+ spectators.</p>
-                    </li>
-                    <li>
-                        <strong>Treasurer</strong>, Cardiff Japanese Society (2024)
-                        <p>Managed finances and social media; co-hosted a spring ball for 80+ people.</p>
-                    </li>
-                    <li>
-                        <strong>Head Student</strong>, Sixth Form (2020–2022)
-                        <p>Elected by peers with the highest vote share; hosted assemblies and led events.</p>
-                    </li>
-                </ul>
-            </section>
+                        <div class="hero-cta-group">
+                            <a href="#projects" class="btn btn-primary">
+                                View Projects
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary liquid-glass">Get in Touch</a>
+                            <a href="https://github.com/luke-navarra/luke_navarra.github.io" target="_blank" rel="noopener" class="btn btn-icon liquid-glass" aria-label="GitHub Repository">
+                                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
 
-            <section id="contact">
-                <h2>Contact</h2>
-                <p>
-                    Feel free to reach out to me via email, or connect with me on GitHub or LinkedIn.
+                    <!-- Interactive Terminal Card -->
+                    <div class="terminal-card liquid-glass">
+                        <div class="terminal-header">
+                            <span class="term-btn term-close"></span>
+                            <span class="term-btn term-min"></span>
+                            <span class="term-btn term-max"></span>
+                            <span class="term-title">luke@cardiff-sec:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="term-line">
+                                <span class="term-prompt">luke@cardiff-sec:~$</span> <span class="term-cmd">cat profile.json</span>
+                            </div>
+                            <pre class="term-output"><code>{
+  <span class="key">"name"</span>: <span class="str">"Luke Navarra"</span>,
+  <span class="key">"degree"</span>: <span class="str">"BSc Computer Science (1st Class)"</span>,
+  <span class="key">"university"</span>: <span class="str">"Cardiff University"</span>,
+  <span class="key">"specialization"</span>: <span class="str">"Security & Forensics"</span>,
+  <span class="key">"focus"</span>: [<span class="str">"Cybersecurity"</span>, <span class="str">"Exploitation"</span>, <span class="str">"Gamified Edu"</span>],
+  <span class="key">"status"</span>: <span class="str">"Open to Graduate Schemes 🚀"</span>
+}</code></pre>
+                            <div class="term-line">
+                                <span class="term-prompt">luke@cardiff-sec:~$</span> <span class="term-cursor">█</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-container">
+            <div class="section-header">
+                <span class="section-label">// 01. BACKGROUND</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-image-wrapper liquid-glass">
+                    <img src="images/Profile Picture.jpg" alt="Luke Navarra Profile Picture" class="profile-img">
+                </div>
+                <div class="about-content">
+                    <p class="paragraph">
+                        I hold a <strong>First Class Honours degree in Computer Science</strong> from Cardiff University, with a specialized focus on <strong>Security and Forensics</strong>. My academic background combines computer science fundamentals with deep explorations into system defense, digital forensics, vulnerability analysis, and secure coding.
+                    </p>
+                    <p class="paragraph">
+                        Outside of formal coursework, I keep my practical skills sharp by tackling challenges on platforms like <strong>Hack The Box</strong> and developing custom software projects.
+                    </p>
+
+                    <div class="stats-row">
+                        <div class="stat-card liquid-glass">
+                            <span class="stat-number">1st</span>
+                            <span class="stat-label">Class Honours</span>
+                        </div>
+                        <div class="stat-card liquid-glass">
+                            <span class="stat-number">BSc</span>
+                            <span class="stat-label">Cardiff University</span>
+                        </div>
+                        <div class="stat-card liquid-glass">
+                            <span class="stat-number">Sec</span>
+                            <span class="stat-label">& Forensics Focus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Tooling Section -->
+        <section id="skills" class="section-container">
+            <div class="section-header">
+                <span class="section-label">// 02. TECH STACK</span>
+                <h2 class="section-title">Skills & Tooling</h2>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Skill Category 1 -->
+                <div class="skill-card liquid-glass">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Security & Forensics</h3>
+                    <ul class="pill-list">
+                        <li><span class="code-pill">Security Forensics</span></li>
+                        <li><span class="code-pill">System Exploitation</span></li>
+                        <li><span class="code-pill">Hack The Box</span></li>
+                        <li><span class="code-pill">Network Security</span></li>
+                        <li><span class="code-pill">Vulnerability Analysis</span></li>
+                        <li><span class="code-pill">Digital Investigations</span></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="skill-card liquid-glass">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+                    </div>
+                    <h3>Languages & Development</h3>
+                    <ul class="pill-list">
+                        <li><span class="code-pill">Python</span></li>
+                        <li><span class="code-pill">Java</span></li>
+                        <li><span class="code-pill">Bash / Shell</span></li>
+                        <li><span class="code-pill">HTML5 / CSS3</span></li>
+                        <li><span class="code-pill">JavaScript</span></li>
+                        <li><span class="code-pill">SQL</span></li>
+                    </ul>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="skill-card liquid-glass">
+                    <div class="skill-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <ul class="pill-list">
+                        <li><span class="code-pill">Linux (Kali / Ubuntu)</span></li>
+                        <li><span class="code-pill">Git & GitHub</span></li>
+                        <li><span class="code-pill">Wireshark</span></li>
+                        <li><span class="code-pill">Minecraft Bedrock / Java API</span></li>
+                        <li><span class="code-pill">VS Code</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section-container">
+            <div class="section-header">
+                <span class="section-label">// 03. FEATURED WORK</span>
+                <h2 class="section-title">Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Featured Project Card: Dissertation -->
+                <div class="project-card featured-project liquid-glass">
+                    <div class="project-badge-row">
+                        <span class="badge-featured">Dissertation Highlight</span>
+                        <span class="badge-tag">Cybersecurity Education</span>
+                    </div>
+
+                    <div class="project-content-grid">
+                        <div class="project-info">
+                            <h3 class="project-name">Code Quest</h3>
+                            <h4 class="project-subtitle">Minecraft for Cybersecurity Education</h4>
+                            <p class="project-desc">
+                                My dissertation project focused on utilizing Minecraft as an interactive platform to teach core cybersecurity concepts through game-based learning. Rather than presenting abstract theory, students explore and experiment with security principles directly inside the game world.
+                            </p>
+                            
+                            <div class="project-tech-stack">
+                                <span class="code-pill">Java</span>
+                                <span class="code-pill">Minecraft API</span>
+                                <span class="code-pill">Gamified Cybersecurity</span>
+                                <span class="code-pill">Educational Tech</span>
+                            </div>
+
+                            <div class="project-actions">
+                                <a href="minecraft-project.html" class="btn btn-primary btn-sm">
+                                    View Project Details
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                                <a href="https://www.youtube.com/playlist?list=PLHh9d7M0UVY0" target="_blank" rel="noopener" class="btn btn-secondary btn-sm liquid-glass">
+                                    YouTube Playlist ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-media">
+                            <a href="minecraft-project.html" class="media-preview-link">
+                                <img src="https://img.youtube.com/vi/HzF1-EyuZF8/hqdefault.jpg" alt="Code Quest Minecraft Project Thumbnail" class="project-thumbnail">
+                                <div class="play-overlay">
+                                    <div class="play-button">▶</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Project Card 1: Hack The Box & Security Labs -->
+                <div class="project-card liquid-glass">
+                    <div class="project-badge-row">
+                        <span class="badge-tag">Security & Labs</span>
+                    </div>
+                    <h3 class="project-name">Hack The Box & Cyber Labs</h3>
+                    <p class="project-desc">
+                        Active participation in Hack The Box challenges, focusing on penetration testing, privilege escalation, vulnerability assessments, and network forensics across Linux and Windows environments.
+                    </p>
+                    <div class="project-tech-stack">
+                        <span class="code-pill">Hack The Box</span>
+                        <span class="code-pill">Linux</span>
+                        <span class="code-pill">Network Recon</span>
+                        <span class="code-pill">Privilege Escalation</span>
+                    </div>
+                </div>
+
+                <!-- Secondary Project Card 2: Security & Forensics Toolkit -->
+                <div class="project-card liquid-glass">
+                    <div class="project-badge-row">
+                        <span class="badge-tag">Software Development</span>
+                    </div>
+                    <h3 class="project-name">Security & Automation Scripts</h3>
+                    <p class="project-desc">
+                        Custom scripts and utility tools built in Python and Bash for automating system security checks, network packet analysis, and forensic artifact extraction.
+                    </p>
+                    <div class="project-tech-stack">
+                        <span class="code-pill">Python</span>
+                        <span class="code-pill">Bash</span>
+                        <span class="code-pill">Git</span>
+                        <span class="code-pill">Forensics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Leadership Section -->
+        <section id="experience" class="section-container">
+            <div class="section-header">
+                <span class="section-label">// 04. EXPERIENCE & LEADERSHIP</span>
+                <h2 class="section-title">Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item liquid-glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Varsity Student Athlete — Korfball</h3>
+                        <span class="timeline-date">2026</span>
+                    </div>
+                    <h4 class="timeline-org">Cardiff University</h4>
+                    <p class="timeline-body">
+                        Represented Cardiff University at Welsh Varsity against Swansea University in front of 100+ spectators, showcasing team coordination, resilience, and high-performance commitment.
+                    </p>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item liquid-glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Treasurer</h3>
+                        <span class="timeline-date">2024</span>
+                    </div>
+                    <h4 class="timeline-org">Cardiff Japanese Society</h4>
+                    <p class="timeline-body">
+                        Managed society finances and budget allocation, curated social media campaigns, and co-hosted a major Spring Ball event for over 80 guests.
+                    </p>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item liquid-glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-header">
+                        <h3 class="timeline-role">Head Student</h3>
+                        <span class="timeline-date">2020 – 2022</span>
+                    </div>
+                    <h4 class="timeline-org">Sixth Form</h4>
+                    <p class="timeline-body">
+                        Elected by peers and faculty with the highest vote share. Hosted school-wide assemblies, led student council meetings, and spearheaded charity events.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container">
+            <div class="contact-card liquid-glass">
+                <span class="section-label">// 05. GET IN TOUCH</span>
+                <h2 class="contact-heading">Let's Connect</h2>
+                <p class="contact-lead">
+                    I am actively seeking <strong>graduate schemes</strong>, <strong>security analyst</strong>, or <strong>software engineering</strong> opportunities. Feel free to reach out via email or connect with me on GitHub or LinkedIn!
                 </p>
-                <p>
-                    I am open to any graduate schemes or opportunities!
-                </p>
-                <div class="contact-links">
-                    <a href="mailto:lukenavarra8@gmail.com" class="contact-link">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                <div class="contact-actions">
+                    <button id="copy-email-btn" class="btn btn-primary" data-email="lukenavarra8@gmail.com">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M2 4h20v16H2V4zm2 2v.5l8 6 8-6V6H4zm16 2.5l-8 6-8-6V18h16V8.5z"/>
                         </svg>
-                        Email
-                    </a>
-                    <a href="https://github.com/luke-navarra/luke_navarra.github.io" class="contact-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <span id="email-text">lukenavarra8@gmail.com</span>
+                    </button>
+
+                    <a href="https://github.com/luke-navarra/luke_navarra.github.io" target="_blank" rel="noopener" class="btn btn-secondary liquid-glass">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
                         </svg>
-                        GitHub
+                        GitHub Profile
                     </a>
-                    <a href="https://www.linkedin.com/in/luke-navarra/" class="contact-link" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+
+                    <a href="https://www.linkedin.com/in/luke-navarra/" target="_blank" rel="noopener" class="btn btn-secondary liquid-glass">
+                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.025-3.04-1.85-3.04-1.855 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.475-.9 1.635-1.85 3.365-1.85 3.6 0 4.27 2.37 4.27 5.455v6.28zM5.34 7.43a2.07 2.07 0 11.001-4.14 2.07 2.07 0 010 4.14zM7.11 20.45H3.56V9h3.55v11.45z"/>
                         </svg>
                         LinkedIn
                     </a>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <script src="script.js"></script>
-    </body>
+    <footer id="footer">
+        <p>© 2026 Luke Navarra. Built with HTML, CSS & JavaScript.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
